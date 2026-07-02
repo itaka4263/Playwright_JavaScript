@@ -17,7 +17,7 @@ export default defineConfig({
     ['allure-playwright']                    // Allureレポート用
   ],                                         // Allureレポート用
   use: {
-    headless: false,                         // false:ブラウザ表示, true:ブラウザ非表示（デフォルト）
+    headless: true,                         // false:ブラウザ表示, true:ブラウザ非表示（デフォルト）
                                              // 注意:ブラウザ表示と非表示ではウィンドウサイズが違うため、スクショのサイズも変わります。
     viewport: null,                          // viewportを固定しない（最大化に必須）
   //viewport: { width: 1920, height: 1080 }, // viewportを固定する
