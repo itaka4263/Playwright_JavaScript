@@ -1,0 +1,14 @@
+# Playwright / Allure / Reports
+allure-report/
+allure-results/
+playwright-report/
+test-results/
+Screenshot/
+
+# Node.js
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
