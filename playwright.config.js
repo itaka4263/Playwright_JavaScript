@@ -12,10 +12,11 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
-  reporter: [                                // Allureレポート用
+  reporter: [                                // 
     ['list'],                                // Allureレポート用
     ['allure-playwright']                    // Allureレポート用
-  ],                                         // Allureレポート用
+    ['html', { outputFolder: 'playwright-report', open: 'never' }] // ワーニング抑制用
+  ],                                         //
   use: {
     headless: true,                         // false:ブラウザ表示, true:ブラウザ非表示（デフォルト）
                                              // 注意:ブラウザ表示と非表示ではウィンドウサイズが違うため、スクショのサイズも変わります。
