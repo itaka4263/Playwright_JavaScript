@@ -5,6 +5,8 @@ on:
   #   branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  # schedule:
+  #   - cron: "0 0 * * *"   # UTC 0:00 = JST 9:00
   workflow_dispatch:
 
 jobs:
