@@ -13,9 +13,9 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   reporter: [                                // 
-    ['list'],                                // Allureレポート用
-    ['allure-playwright']                    // Allureレポート用
-    ['html', { outputFolder: 'playwright-report', open: 'never' }] // ワーニング抑制用
+    ['list'],                                // 
+    ['allure-playwright'],                   // Allureレポート用
+    ['html', { outputFolder: 'playwright-report', open: 'never' }] // htmlレポート用
   ],                                         //
   use: {
     headless: true,                         // false:ブラウザ表示, true:ブラウザ非表示（デフォルト）
