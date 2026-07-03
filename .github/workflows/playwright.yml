@@ -14,11 +14,11 @@ jobs:
     steps:
       # ① リポジトリをチェックアウト
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # ② Node.js セットアップ
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '18'
 
@@ -36,7 +36,7 @@ jobs:
 
       # ⑥ Playwright HTML レポートを保存（Artifacts）
       - name: Upload Playwright HTML report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: playwright-report
@@ -44,7 +44,7 @@ jobs:
 
       # ⑦ Allure レポート保存（Artifacts）
       - name: Upload Allure results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: allure-results
@@ -52,7 +52,7 @@ jobs:
 
       # ⑧ テスト結果（スクリーンショット・動画・trace）保存
       - name: Upload Test Results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: test-results
