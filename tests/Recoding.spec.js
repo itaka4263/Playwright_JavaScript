@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 const sleep = (time) => new Promise((r) => setTimeout(r, time));  // timeはミリ秒
 const timestamp = () => dayjs().format('YYYYMMDD_HHmmss_SSS');    // スクショ保存時のタイムスタンプ
 
-test('Recoding1.test',{tag: '@aaa'}, async ({ page }) => {
+test('Recoding.test',{tag: '@aaa'}, async ({ page }) => {
   console.log("Recoding1.Start.");
   // 1.1. ページ移動（ロード完了まで待つ）
   await page.goto('https://example.com/', { waitUntil: 'load' });
@@ -28,6 +28,6 @@ test('Recoding1.test',{tag: '@aaa'}, async ({ page }) => {
   await expect(page.locator('#example-domains')).toContainText('Example Domains');
   // 2.4. スリープ
   await sleep(1000);
-	console.log("Recoding1.End.");
+	console.log("Recoding.End.");
 
 });
