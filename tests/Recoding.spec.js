@@ -17,7 +17,7 @@ test('Recoding.test',{tag: '@aaa'}, async ({ page }, testInfo) => {
   const browserName = testInfo.project.name;
   // 1.4. スクリーンショット
   // await page.screenshot({path: `screenshots${timestamp()}.png`, fullPage: true});
-  await page.screenshot({path: `./screenshots/${browserName}_screenshot1.png`, fullPage: true});
+  await page.screenshot({path: `./screenshots/${browserName}_Screenshot1.png`, fullPage: true});
   await expect(page.getByRole('link')).toContainText('Learn more');
   // 1.5. リンクのクリック
   await page.getByRole('link', { name: 'Learn more' }).click();
@@ -25,7 +25,7 @@ test('Recoding.test',{tag: '@aaa'}, async ({ page }, testInfo) => {
   await page.waitForLoadState('networkidle');
   // 2.2. スクリーンショット
   // await page.screenshot({path: `screenshots${timestamp()}.png`, fullPage: true});
-  await page.screenshot({path: `./screenshots/${browserName}_screenshot2.png`, fullPage: true});
+  await page.screenshot({path: `./screenshots/${browserName}_Screenshot2.png`, fullPage: true});
   // 2.3. 検証  部分一致：toContainText(), 完全一致：toHaveText()
   await expect(page.locator('#example-domains')).toContainText('Example Domains');
   // 2.4. スリープ
