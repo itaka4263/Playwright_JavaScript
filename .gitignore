@@ -3,7 +3,7 @@ allure-report/
 allure-results/
 playwright-report/
 test-results/
-Screenshot/
+screenshots/
 
 # Node.js
 node_modules/

@@ -38,24 +38,33 @@ jobs:
 
       # ⑥ Playwright HTML レポートを保存（Artifacts）
       - name: Upload Playwright HTML report
-        uses: actions/upload-artifact@v7
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report
 
       # ⑦ Allure レポート保存（Artifacts）
       - name: Upload Allure results
-        uses: actions/upload-artifact@v7
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results
 
       # ⑧ テスト結果（スクリーンショット・動画・trace）保存
       - name: Upload Test Results
-        uses: actions/upload-artifact@v7
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: test-results
           path: test-results
+
+      # ⑨ スクリーンショット保存
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: screenshots/
+
